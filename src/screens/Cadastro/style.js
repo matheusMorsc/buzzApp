@@ -2,7 +2,9 @@ import React from "react";
 import { StyleSheet, ActivityIndicator } from "react-native";
 import { Directions } from "react-native-gesture-handler";
 
-export const Container = StyleSheet.create({
+export const Container = StyleSheet.create(
+
+    {
         Container: {
             marginTop: 50,
             height: 80,
@@ -11,7 +13,8 @@ export const Container = StyleSheet.create({
             /*borderBottomWidth: 2,*/
             flexDirection: "row",
             alignItems: "center",
-            justifyContent: "center",      
+            justifyContent: "center",
+            
         },
         TextoLogo: {
             color: "#45c",
@@ -20,7 +23,8 @@ export const Container = StyleSheet.create({
         },
         TextoTitulo:{
             fontSize: 33,
-            marginBottom: 55,
+            marginTop: 80,
+            marginBottom: 40,
             color:"#45c",
         },
         MainContainer: {
@@ -32,7 +36,7 @@ export const Container = StyleSheet.create({
         InputArea: {
             /*flex: 1,*/
             /*backgroundColor: "#fff",*/
-            margin: 15,
+            margin: 25,
             alignItems: "center",
         },
         input:{
@@ -63,7 +67,7 @@ export const Container = StyleSheet.create({
             color: '#fff'
         },
         botao:{
-            width: 80,
+            width: 100,
             height: 42,
             backgroundColor: '#6558f5',
             marginTop: 33,

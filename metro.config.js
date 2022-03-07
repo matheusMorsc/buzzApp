@@ -8,7 +8,7 @@ module.exports = (() => {
   config.transformer = {
     getTransformOptions: async () => ({
         tranform: {
-            experimentalImportSupport: false,
+            experimentalImportSupport: true,
             inlineRequires: false,
         },
     }),

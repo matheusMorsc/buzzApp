@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Container } from './style';
 import { View, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, Text,  Keyboard, Pressable} from "react-native";
 import Onibus from '../../img/Onibus.svg';
@@ -6,22 +6,15 @@ import { useNavigation  } from "@react-navigation/native";
 /*import { Input, Text } from 'react-native-elements';*/
 
 
-export default function Login({navigation}) {
-    
-    const clicouCadastro = () => {
-        /*navigation.navigate("Cadastro")*/
-        navigation.reset({
-            index: 0,
-            routes: [{name: "Cadastro"}]
-        })
+export default function Cadastro({navigation}) {
+
+
+    const clicouLogin = () => {
+        navigation.navigate("Login")
     }
-   
+
     const clicou = () => {
-        /*navigation.navigate('Principal')*/
-        navigation.reset({
-           index: 0,
-           routes: [{name: "Principal"}]
-       })
+        /*Alert.alert("Cadastro", "Foi realizado com sucesso!");*/
     }
 
     return (
@@ -29,23 +22,24 @@ export default function Login({navigation}) {
             <Pressable onPress={Keyboard.dismiss}>
            
             <View style={Container.InputArea}>
-
-                <Text style={Container.TextoTitulo}> Seja bem vindo! </Text>
                 
                 <View style={Container.InputLogin}>
-                    <Text style={Container.Texto}>  Usuário</Text>
+                    <Text style={Container.Texto}>   Usuário</Text>
                     <TextInput style={Container.input} />
 
-                    <Text style={Container.Texto}>Senha</Text>
+                    <Text style={Container.Texto}>Email</Text>
+                    <TextInput style={Container.input} />
+
+                    <Text style={Container.Texto}> Senha</Text>
                     <TextInput style={Container.input} />
 
                     <TouchableOpacity style={Container.botao} onPress={ () => {clicou()}}>
-                        <Text style={Container.botaoText}>Entrar</Text>
+                        <Text style={Container.botaoText}>Cadastrar</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={Container.textoCadastro} onPress={() => clicouCadastro()}>
-                        <Text style={{color: "#6558f5"}}>Ainda não possui uma conta?</Text>
-                        <Text style={{fontWeight: "bold", color: "#6558f5"}}> Cadastre-se</Text>
+                    <TouchableOpacity style={Container.textoCadastro} onPress={() => {clicouLogin()}}>
+                        <Text style={{color: "#6558f5"}}>Já possui uma conta?</Text>
+                        <Text style={{fontWeight: "bold", color: "#6558f5"}}> Faça login</Text>
                     </TouchableOpacity>                
                 </View>           
             </View>
