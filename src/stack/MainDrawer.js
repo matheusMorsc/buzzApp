@@ -7,7 +7,7 @@ import Principal from '../screens/Principal';
 
 const Drawer = createDrawerNavigator();
 
-export default function MyDraw() {
+export default function MyDrawer() {
   return (
     <NavigationContainer>
         <Drawer.Navigator initialRouteName="Principal">

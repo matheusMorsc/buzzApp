@@ -1,37 +1,18 @@
 import React from "react";
-import { StyleSheet, ActivityIndicator } from "react-native";
-import { Directions } from "react-native-gesture-handler";
+import { StyleSheet } from "react-native";
 
 export const Container = StyleSheet.create(
-
     {
-        Container: {
-            marginTop: 50,
-            height: 80,
-            width: "100%",
-            /*backgroundColor: "#b1b1b1",*/
-            /*borderBottomWidth: 2,*/
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            
-        },
-        TextoLogo: {
-            color: "#45c",
-            fontSize: 45,
-            flexDirection: "row",
+        MainContainer: {
+            flex: 1,
+            backgroundColor: "#fff",
+            justifyContent: "center"
         },
         TextoTitulo:{
             fontSize: 33,
             marginTop: 80,
             marginBottom: 40,
             color:"#45c",
-        },
-        MainContainer: {
-            flex: 1,
-            /*backgroundColor: "#ccc",*/
-            backgroundColor: "#fff",
-            justifyContent: "center"
         },
         InputArea: {
             /*flex: 1,*/
@@ -80,6 +61,19 @@ export const Container = StyleSheet.create(
             marginTop: 25,
             fontSize: 17,
             flexDirection: "row",     
-        }
+        },
+        LogoBuzz: {
+            marginTop: 50,
+            height: 80,
+            width: "100%",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",    
+        },
+        TextoLogo: {
+            color: "#45c",
+            fontSize: 45,
+            flexDirection: "row",
+        },
     }
 )

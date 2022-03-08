@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
-import { Container } from './style';
+import React from "react";
 import { View, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, Text,  Keyboard, Pressable} from "react-native";
-import Onibus from '../../img/Onibus.svg';
-import { useNavigation  } from "@react-navigation/native";
-/*import { Input, Text } from 'react-native-elements';*/
+import { Container } from './style';
 
+import Onibus from '../../img/Onibus.svg';
 
 export default function Login({navigation}) {
     
@@ -17,17 +15,16 @@ export default function Login({navigation}) {
     }
    
     const clicou = () => {
-        /*navigation.navigate('Principal')*/
+        /*navigation.navigate('Cartao')*/
         navigation.reset({
            index: 0,
-           routes: [{name: "Principal"}]
+           routes: [{name: "Cartao"}]
        })
     }
 
     return (
         <View style={Container.MainContainer}>
-            <Pressable onPress={Keyboard.dismiss}>
-           
+            <Pressable onPress={Keyboard.dismiss}>    
             <View style={Container.InputArea}>
 
                 <Text style={Container.TextoTitulo}> Seja bem vindo! </Text>
@@ -39,7 +36,7 @@ export default function Login({navigation}) {
                     <Text style={Container.Texto}>Senha</Text>
                     <TextInput style={Container.input} />
 
-                    <TouchableOpacity style={Container.botao} onPress={ () => {clicou()}}>
+                    <TouchableOpacity style={Container.botao} onPress={() => {clicou()}}>
                         <Text style={Container.botaoText}>Entrar</Text>
                     </TouchableOpacity>
 
@@ -47,12 +44,14 @@ export default function Login({navigation}) {
                         <Text style={{color: "#6558f5"}}>Ainda não possui uma conta?</Text>
                         <Text style={{fontWeight: "bold", color: "#6558f5"}}> Cadastre-se</Text>
                     </TouchableOpacity>                
-                </View>           
+                </View>            
             </View>
-            <View style={Container.Container}>
+
+            <View style={Container.LogoBuzz}>
                 <Onibus width="15%" height="45" />
                 <Text style={Container.TextoLogo}>BUZZ</Text>
             </View>
+            
             </Pressable>
         </View>
     );

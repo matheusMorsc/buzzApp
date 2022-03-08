@@ -1,27 +1,81 @@
 import React from 'react'
-import { View, Text, SafeAreaView, StyleSheet, ScrollView, Button, StatusBar } from 'react-native';
-
+import { View, Text, SafeAreaView, StyleSheet, ScrollView, Button, StatusBar, Touchable } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList,DrawerItem } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
+import { TouchableRipple, Switch, Drawer } from 'react-native-paper';
+
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Preload from './src/screens/Preload';
 import Login from './src/screens/Login';
 import Cadastro from './src/screens/Cadastro';
-import Principal from './src/screens/Principal';
+import Cartao from './src/screens/Cartao';
+import Perfil from './src/screens/Perfil';
 
 const Stack = createStackNavigator();
 
-const Drawer = createDrawerNavigator();
+const Draweer = createDrawerNavigator();
 
-function DrawerRoutes() {
+function CustomDrawerContent(props) {
   return (
-       
-      <Drawer.Navigator initialRouteName='Principal'>
-        <Drawer.Screen name='Perfil' component={Principal} />
-      </Drawer.Navigator>
+    <View style={{flex: 1}}>
+      <DrawerContentScrollView {...props}  >
+      <Drawer.Section style={{flex: 1, marginTop: 15, }}>
+        <DrawerItemList {...props} />
+          <DrawerItem
+            label="Ônibus"
+            onPress={() => {}}
+          />
+          <DrawerItem
+            label="Leitor"
+            onPress={() => {}}
+          />
+      </Drawer.Section>
+
+      <Drawer.Section title='Preferences' style={{borderTopColor: '#f4f4f4', borderTopWidth: 1}}>
+          <TouchableRipple>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 6, paddingHorizontal: 16}}>
+              <Text style={{marginTop: 15,}}>Dark Mode</Text>
+              <Switch />
+            </View>
+          </TouchableRipple>
+        </Drawer.Section>
+      </DrawerContentScrollView>
+
+      <Drawer.Section style={{marginBottom: 15, borderTopColor: '#f4f4f4', borderTopWidth: 1}}>   
+        <DrawerItem        
+            label="Sair"
+            icon={() => (
+              <Icon name="exit-to-app" size={35} color='#6558f5'/>
+            )}
+            onPress={() => {
+            props.navigation.navigate('Login');
+            }}
+          />
+      </Drawer.Section>  
+      </View>
   );
 }
+
+function DrawerRoutes() {
+  return (      
+      <Draweer.Navigator 
+      screenOptions={{
+        drawerStyle: {
+          backgroundColor: '#fff',
+          width: 240,
+        },
+      
+        headerShown: false,
+      }}
+      drawerContent={(props) => <CustomDrawerContent {...props} />} initialRouteName="Cartao" >
+        <Draweer.Screen name='Cartão Virtual'  component={Cartao} />
+        <Draweer.Screen name='Perfil' component={Perfil} /> 
+      </Draweer.Navigator>
+  );
+}
+
 
 function App() {
   return (
@@ -35,15 +89,15 @@ function App() {
       <Stack.Screen name="Preload" component={Preload}/>
       <Stack.Screen name="Login" component={Login}/>
       <Stack.Screen name="Cadastro" component={Cadastro}/>
-      <Stack.Screen name="Principal" component={DrawerRoutes}/>
-       
+      <Stack.Screen name="Perfil" component={Perfil}/>
+      <Stack.Screen name="Cartao" component={DrawerRoutes}/>
+      
     </Stack.Navigator>
     </NavigationContainer>   
   );
 }
 
 export default App;
-
 
 /*
 import React from "react";

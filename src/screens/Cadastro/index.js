@@ -1,13 +1,9 @@
 import React from "react";
 import { Container } from './style';
-import { View, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, Text,  Keyboard, Pressable} from "react-native";
+import { View, TextInput, TouchableOpacity, Text,  Keyboard, Pressable, Alert} from "react-native";
 import Onibus from '../../img/Onibus.svg';
-import { useNavigation  } from "@react-navigation/native";
-/*import { Input, Text } from 'react-native-elements';*/
-
 
 export default function Cadastro({navigation}) {
-
 
     const clicouLogin = () => {
         navigation.navigate("Login")
@@ -21,8 +17,7 @@ export default function Cadastro({navigation}) {
         <View style={Container.MainContainer}>
             <Pressable onPress={Keyboard.dismiss}>
            
-            <View style={Container.InputArea}>
-                
+            <View style={Container.InputArea}>              
                 <View style={Container.InputLogin}>
                     <Text style={Container.Texto}>   Usuário</Text>
                     <TextInput style={Container.input} />
@@ -43,7 +38,8 @@ export default function Cadastro({navigation}) {
                     </TouchableOpacity>                
                 </View>           
             </View>
-            <View style={Container.Container}>
+
+            <View style={Container.LogoBuzz}>
                 <Onibus width="15%" height="45" />
                 <Text style={Container.TextoLogo}>BUZZ</Text>
             </View>

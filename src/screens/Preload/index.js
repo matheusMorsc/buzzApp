@@ -2,8 +2,6 @@ import React from "react";
 import {Container} from './style';
 import {Text,View,ActivityIndicator} from 'react-native';
 import Onibus from '../../img/Onibus.svg';
-import { useNavigation } from '@react-navigation/native';
-
 
 export default function Preload ({navigation}) {
     const telaLogin = () => {
