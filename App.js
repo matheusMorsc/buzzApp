@@ -81,12 +81,12 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName='Preload'
+      initialRouteName='Login'
       screenOptions={{
         headerShown: false
       }}
     >
-      <Stack.Screen name="Preload" component={Preload}/>
+      
       <Stack.Screen name="Login" component={Login}/>
       <Stack.Screen name="Cadastro" component={Cadastro}/>
       <Stack.Screen name="Perfil" component={Perfil}/>

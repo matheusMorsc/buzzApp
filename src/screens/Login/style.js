@@ -10,7 +10,7 @@ export const Container = StyleSheet.create({
         TextoTitulo:{
             fontSize: 33,
             marginBottom: 55,
-            color:"#45c",
+            color:"#6558f5",
         },
         InputArea: {
             /*flex: 1,*/
@@ -23,6 +23,7 @@ export const Container = StyleSheet.create({
             marginTop:10,
             width: 275,
             height: 45,
+            color: '#6558f5',
             borderColor: '#dfe6ed',
             fontSize: 16,
             fontWeight: 'bold',
@@ -34,7 +35,7 @@ export const Container = StyleSheet.create({
             alignItems: "center",
         },
         Texto:{
-            color:"#45c",
+            color:"#6558f5",
             fontSize:25,
             marginRight: 200,
             marginTop: 15,
@@ -69,7 +70,7 @@ export const Container = StyleSheet.create({
             justifyContent: "center",      
         },
         TextoLogo: {
-            color: "#45c",
+            color: "#6558f5",
             fontSize: 45,
             flexDirection: "row",
         },

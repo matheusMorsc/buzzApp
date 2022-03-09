@@ -11,7 +11,7 @@ import { StyleSheet, ActivityIndicator } from "react-native";
             
     },
     Texto:{
-        color:"#45c",
+        color:"#6558f5",
         fontSize:50,
         padding:20
         }

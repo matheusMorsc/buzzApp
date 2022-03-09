@@ -12,7 +12,7 @@ export const Container = StyleSheet.create(
             fontSize: 33,
             marginTop: 80,
             marginBottom: 40,
-            color:"#45c",
+            color:"#6558f5",
         },
         InputArea: {
             /*flex: 1,*/
@@ -36,7 +36,7 @@ export const Container = StyleSheet.create(
             alignItems: "center",
         },
         Texto:{
-            color:"#45c",
+            color:"#6558f5",
             fontSize:25,
             marginRight: 200,
             marginTop: 15,
@@ -71,7 +71,7 @@ export const Container = StyleSheet.create(
             justifyContent: "center",    
         },
         TextoLogo: {
-            color: "#45c",
+            color: "#6558f5",
             fontSize: 45,
             flexDirection: "row",
         },

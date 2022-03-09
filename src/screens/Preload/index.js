@@ -15,7 +15,7 @@ return (
     <View style = {Container.Container}>
         <Onibus width="100%" height="180" onPress={() => telaLogin()} />
         <Text style={Container.Texto} >BUZZ</Text>
-        <ActivityIndicator size={"large"} color={"#45c"}/>
+        <ActivityIndicator size={"large"} color={"#6558f5"}/>
      </View>
 );
 }
