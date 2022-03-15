@@ -6,7 +6,7 @@ export const Container = StyleSheet.create(
         MainContainer: {
             flex: 1,
             backgroundColor: "#fff",
-            justifyContent: "center"
+            justifyContent: "center",
         },
         TextoTitulo:{
             fontSize: 33,
@@ -19,28 +19,36 @@ export const Container = StyleSheet.create(
             /*backgroundColor: "#fff",*/
             margin: 25,
             alignItems: "center",
+            
         },
         input:{
-            padding: 10, 
-            marginTop:10,
+            top: 10,
+            /*padding: 10, */
+            marginTop:1,
             width: 275,
-            height: 45,
+            height: 35,
             borderColor: '#dfe6ed',
             fontSize: 16,
             fontWeight: 'bold',
             borderRadius: 4,
             borderWidth: 2,
-            margin: "-4%"
+            margin: "-4%",
+            
           },
         InputLogin:{
             alignItems: "center",
+                 
         },
         Texto:{
-            color:"#6558f5",
-            fontSize:25,
-            marginRight: 200,
-            marginTop: 15,
             top: 10,
+            color:"#6558f5",
+            fontSize:22,
+            /*marginRight: 200,*/
+            marginTop: 20,
+            textAlign: 'auto',
+            width: 275,
+    
+            
         },
         botaoText:{
             fontSize: 17,
@@ -48,6 +56,7 @@ export const Container = StyleSheet.create(
             color: '#fff'
         },
         botao:{
+            top: 10,
             width: 100,
             height: 42,
             backgroundColor: '#6558f5',

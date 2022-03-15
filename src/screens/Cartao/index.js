@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, SafeAreaView, Text, Image, TouchableOpacity} from 'react-native';
+import { View, SafeAreaView, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import { Container } from './style';
 
 import Onibus from '../../img/Onibus.svg';
@@ -19,6 +19,7 @@ const [qrValue, setQrValue] = useState('');
 
     return(
         <View style={Container.container}>
+          <ScrollView>
           <View style={Container.header}>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Icon style={{marginTop: 45, left: 10, width: 50}} name="menu" size={45} color='#fff'/>
@@ -49,7 +50,8 @@ const [qrValue, setQrValue] = useState('');
                 <Onibus width="15%" height="45" />
                 <Text style={Container.TextoLogo}>BUZZ</Text>
             </View>*/}
-          </View>    
+          </View>  
+          </ScrollView>  
       </View>    
     );
 }

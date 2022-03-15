@@ -9,7 +9,7 @@ export const Container = StyleSheet.create({
         },
         TextoTitulo:{
             fontSize: 33,
-            marginBottom: 55,
+            marginBottom: 50,
             color:"#6558f5",
         },
         InputArea: {
