@@ -12,6 +12,7 @@ import Login from './src/screens/Login';
 import Cadastro from './src/screens/Cadastro';
 import Cartao from './src/screens/Cartao';
 import Perfil from './src/screens/Perfil';
+import Scanner from './src/screens/Scanner';
 
 const Stack = createStackNavigator();
 
@@ -70,8 +71,10 @@ function DrawerRoutes() {
         headerShown: false,
       }}
       drawerContent={(props) => <CustomDrawerContent {...props} />} initialRouteName="Cartao" >
+
         <Draweer.Screen name='Cartão Virtual'  component={Cartao} />
         <Draweer.Screen name='Perfil' component={Perfil} /> 
+        <Draweer.Screen name='Scanner' component={Scanner} /> 
       </Draweer.Navigator>
   );
 }
@@ -90,8 +93,10 @@ function App() {
       <Stack.Screen name="Login" component={Login}/>
       <Stack.Screen name="Cadastro" component={Cadastro}/>
       <Stack.Screen name="Perfil" component={Perfil}/>
+      <Stack.Screen name="Scanner" component={Scanner}/>
       <Stack.Screen name="Cartao" component={DrawerRoutes}/>
       
+
     </Stack.Navigator>
     </NavigationContainer>   
   );
