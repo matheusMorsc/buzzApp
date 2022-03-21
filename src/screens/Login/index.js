@@ -22,7 +22,7 @@ export default function Login({ navigation }) {
             routes: [{ name: "Perfil" }]
         })
     }
-
+   
     return (
         <View style={Container.MainContainer}>
             <Pressable onPress={Keyboard.dismiss}>

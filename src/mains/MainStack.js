@@ -5,6 +5,8 @@ import Preload from '../screens/Preload';
 import Login from '../screens/Login';
 import Cadastro from '../screens/Cadastro';
 import Scanner from '../screens/Scanner';
+import Usuarios from '../screens/Usuarios';
+
 
 import DrawerRoutes from './MainDrawer';
 
@@ -26,6 +28,8 @@ function StackRoutes() {
       <Stack.Screen name="Scanner" component={Scanner}/>
       <Stack.Screen name="Cartao" component={DrawerRoutes}/>
       <Stack.Screen name="Perfil" component={DrawerRoutes}/>
+      <Stack.Screen name="Usuarios" component={Usuarios}/>
+      
       
     </Stack.Navigator>
       

@@ -8,6 +8,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Cartao from '../screens/Cartao';
 import Perfil from '../screens/Perfil';
 import Scanner from '../screens/Scanner';
+import Usuarios from '../screens/Usuarios';
+
 
 const Draweer = createDrawerNavigator();
 
@@ -26,7 +28,10 @@ function DrawerRoutes() {
 
         <Draweer.Screen name='Perfil ' component={Perfil} />
         <Draweer.Screen name='Cartão Virtual'  component={Cartao} /> 
-        <Draweer.Screen name='Scanner' component={Scanner} /> 
+        <Draweer.Screen name='Scanner' component={Scanner} />
+        <Draweer.Screen name='Usuários' component={Usuarios} />
+        
+       
       </Draweer.Navigator>
   );
 }
@@ -36,6 +41,7 @@ function CustomDrawerContent(props) {
   return (
     <View style={{flex: 1}}>
       <DrawerContentScrollView {...props}  >
+
       <Drawer.Section style={{flex: 1, marginTop: 15, }}>
         <DrawerItemList {...props} />
           <DrawerItem

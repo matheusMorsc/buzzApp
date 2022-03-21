@@ -6,7 +6,7 @@ export const Container = StyleSheet.create({
       width:'100%',
       height: '100%',
       overflow: 'scroll', 
-      backgroundColor: "#ccc"
+      backgroundColor: "#F0F8FF"
     },
     touchMenu:{
       marginTop:40,
@@ -25,13 +25,11 @@ export const Container = StyleSheet.create({
     },
     Input:{
       fontSize:20,
-      color: 'white'
+      color: '#8A2BE2'
     },
     header:{
       height: '60%',
       backgroundColor: "#6558f5",
-
-      
       
     },
     headerContent:{
@@ -81,7 +79,7 @@ export const Container = StyleSheet.create({
       width:'90%',
       alignItems: 'flex-start',
       justifyContent: 'center',
-      backgroundColor: '#ccc',
+      backgroundColor: '#F0F8FF',
       left:'5%',
 
     },
@@ -99,7 +97,3 @@ export const Container = StyleSheet.create({
       flexDirection: "row",
     },
 });
-
-
-
-
