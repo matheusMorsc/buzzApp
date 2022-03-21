@@ -56,18 +56,17 @@ export const Container = StyleSheet.create(
             color: '#fff'
         },
         botao:{
-            top: 10,
             width: 100,
             height: 42,
             backgroundColor: '#6558f5',
-            marginTop: 33,
+            marginTop: 20,
             borderRadius: 3,
             alignItems: 'center',
             justifyContent: 'center'
         },
         textoCadastro:{
             justifyContent:"center",
-            marginTop: 25,
+            marginTop: 20,
             fontSize: 17,
             flexDirection: "row",     
         },

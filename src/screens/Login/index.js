@@ -4,6 +4,7 @@ import { Container } from './style';
 
 import Onibus from '../../img/Onibus.svg';
 
+
 export default function Login({ navigation }) {
 
     const clicouCadastro = () => {
@@ -43,6 +44,10 @@ export default function Login({ navigation }) {
                         <TouchableOpacity style={Container.textoCadastro} onPress={() => clicouCadastro()}>
                             <Text style={{ color: "#6558f5" }}>Ainda não possui uma conta?</Text>
                             <Text style={{ fontWeight: "bold", color: "#6558f5" }}> Cadastre-se</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[Container.textoCadastro, {bottom: 10}]} onPress={() => clicouLoginMotorista()}>
+                            <Text style={{ color: "#6558f5" }}>Fazer login como motorista</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
