@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Text, View, StyleSheet, Button, TouchableOpacity } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import Icon from 'react-native-vector-icons/Entypo';
+=======
+import { Text, View, StyleSheet, Button } from 'react-native';
+import { BarCodeScanner } from 'expo-barcode-scanner';
+>>>>>>> 85160a507ed5279ad2201fc38200418c9698be92
 
 
 export default function Scanner() {
